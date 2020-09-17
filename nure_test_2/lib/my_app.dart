@@ -1,19 +1,17 @@
-import 'package:first_app/resources/app_strings.dart';
 import 'package:flutter/material.dart';
-import 'package:first_app/ui/pages/home_page.dart';
+import 'package:nure_test_2/ui/pages/home_page.dart';
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: AppStrings.appTitle,
+      title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: HomePage(title: AppStrings.homePageTitle),
+      home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
-
