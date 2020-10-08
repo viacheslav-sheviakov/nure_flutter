@@ -29,7 +29,10 @@ class _HomePageState extends State<HomePage> {
               },
               child: Hero(
                 tag: "Logo",
-                child: Image.asset(ImageAssets.flutterLogo),
+                child: Container(
+                  width: 100.0,
+                  child: Image.asset(ImageAssets.flutterLogo),
+                ),
               ),
             ),
             SizedBox(height: 24.0),
