@@ -10,7 +10,7 @@ class RoundedCorners extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  ClipRRect(
+    return ClipRRect(
       borderRadius: BorderRadius.circular(100.0),
       child: child,
     );

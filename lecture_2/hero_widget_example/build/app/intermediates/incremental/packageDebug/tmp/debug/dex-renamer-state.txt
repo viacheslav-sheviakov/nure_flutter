@@ -1,0 +1,4 @@
+#Thu Oct 08 09:03:50 EEST 2020
+base.0=/Users/proarea_dev/Documents/GitHub/nure_flutter/lecture_2/hero_widget_example/build/app/intermediates/dex/debug/mergeDexDebug/out/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

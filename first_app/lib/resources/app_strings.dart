@@ -1,4 +1,5 @@
 class AppStrings {
+
   AppStrings._();
 
   // My App
@@ -6,5 +7,8 @@ class AppStrings {
 
   // Home Page
   static const helloMessage = "Hello, World!";
-  static const homePageTitle = "Home Page";
+  static const homePageTitle = "My Contacts";
+
+  // Contact Info Page
+  static const contactInfoPageTitle = "Contact Info";
 }
