@@ -15,6 +15,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(AppStrings.homePageTitle),
+        centerTitle: true,
       ),
       body: SingleChildScrollView(
         child: Column(

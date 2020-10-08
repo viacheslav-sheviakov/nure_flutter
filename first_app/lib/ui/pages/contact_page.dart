@@ -50,10 +50,12 @@ class ContactPage extends StatelessWidget {
 
   Widget _buildContactPicture() {
     return Center(
-      child: ProfilePicture(
+      child: Hero(
         tag: contact.uniqueTag,
-        assetPath: contact.imageAssetPath,
-        size: 128.0,
+        child: ProfilePicture(
+          assetPath: contact.imageAssetPath,
+          size: 200.0,
+        ),
       ),
     );
   }

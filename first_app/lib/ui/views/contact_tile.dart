@@ -2,6 +2,7 @@ import 'package:first_app/mocks/contacts_mock.dart';
 import 'package:first_app/models/contact.dart';
 import 'package:first_app/ui/pages/contact_page.dart';
 import 'package:first_app/ui/views/profile_picture.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class ContactTile extends StatelessWidget {
@@ -16,18 +17,22 @@ class ContactTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
+      highlightColor: Theme.of(context).primaryColorLight,
+      splashColor: Theme.of(context).primaryColor,
       onTap: () {
         Navigator.of(context).push(
-          MaterialPageRoute(builder: (_) => ContactPage(contact: _contact)),
+          CupertinoPageRoute(builder: (_) => ContactPage(contact: _contact)),
         );
       },
       child: Padding(
         padding: EdgeInsets.all(16.0),
         child: Row(
           children: [
-            ProfilePicture(
+            Hero(
               tag: _contact.uniqueTag,
-              assetPath: _contact.imageAssetPath,
+              child: ProfilePicture(
+                assetPath: _contact.imageAssetPath,
+              ),
             ),
             SizedBox(width: 22.0),
             Expanded(
