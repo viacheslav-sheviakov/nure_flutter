@@ -27,8 +27,11 @@ class _ShopPageState extends State<ShopPage> {
   Widget _buildShopItemView(ShopItem item) {
     return InkWell(
       onTap: () {
-        Navigator.of(context)
-            .push(MaterialPageRoute(builder: (_) => ShopItemPage(item: item)));
+        Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (_) => ShopItemPage(item: item),
+          ),
+        );
       },
       child: Container(
         width: double.infinity,
