@@ -37,6 +37,7 @@ class ApiClient {
 
       return response;
     } catch (ex) {
+      // TODO: How to improve?
       throw ApiError(message: ex.toString());
     }
   }
