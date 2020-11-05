@@ -1,8 +1,11 @@
+import 'dart:io';
+
 import 'package:chopper/chopper.dart';
 import 'package:simple_chopper/api/api_error.dart';
 import 'package:simple_chopper/api/model/todo_model.dart';
 import 'package:simple_chopper/api/services/todo_service.dart';
 import 'package:simple_chopper/resources/app_constants.dart';
+import 'package:simple_chopper/resources/app_strings.dart';
 
 class ApiClient {
   static final ChopperClient _chopperClient = ChopperClient(
@@ -36,9 +39,12 @@ class ApiClient {
       }
 
       return response;
+    } on ApiError catch (ex) {
+      throw ex;
+    } on SocketException {
+      throw ApiError(message: AppStrings.internetConnectionError);
     } catch (ex) {
-      // TODO: How to improve?
-      throw ApiError(message: ex.toString());
+      throw ApiError(message: AppStrings.generalErrorMessage);
     }
   }
 }

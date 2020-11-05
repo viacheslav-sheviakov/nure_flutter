@@ -14,7 +14,7 @@ class CounterBloc extends BlocBase {
 
   @override
   void dispose() {
-    _counterStreamController.close();
+    _counterStreamController?.close();
     super.dispose();
   }
 

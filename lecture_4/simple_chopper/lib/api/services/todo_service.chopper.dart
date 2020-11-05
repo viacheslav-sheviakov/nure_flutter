@@ -19,4 +19,10 @@ class _$TodoService extends TodoService {
     final $request = Request('GET', $url, client.baseUrl);
     return client.send<dynamic, dynamic>($request);
   }
+
+  Future<Response> getTodoById(int id) {
+    final $url = '/todos/${id}';
+    final $request = Request('GET', $url, client.baseUrl);
+    return client.send<dynamic, dynamic>($request);
+  }
 }

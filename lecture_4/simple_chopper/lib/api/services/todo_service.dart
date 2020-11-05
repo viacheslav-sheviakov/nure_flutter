@@ -9,4 +9,7 @@ abstract class TodoService extends ChopperService {
 
   @Get()
   Future<Response> getAllTodos();
+
+  @Get(path: '/{id}')
+  Future<Response> getTodoById(@Path() int id);
 }
